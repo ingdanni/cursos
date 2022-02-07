@@ -1,0 +1,157 @@
+# Layouts - parte 2
+
+## Agregar estilo a TextView
+
+### Padding
+
+Es el espacio dentro de los límites de una vista o elemento. Es el espacion entre los bordes de la vista y el contenido de la vista.
+
+Los siguientes atributos se usan para definir el padding:
+
+* `android:padding` para los 4 lados de la vista.
+* `android:paddingTop` para el borde superior
+* `android:paddingBottom` para el borde inferior
+* `android:paddingStart` para el borde inicial
+* `android:paddingEnd` para el borde final
+
+### Margin
+
+Es el espacion que se agrega fuera de los bordes de la vista. Es el espacio entre los bordes de la vista y el contenedor de la vista (padre).
+
+Los siguientes atributos se usan para definir el margin:
+
+* `android:layout_margin` para los 4 lados de la vista.
+* `android:layout_marginTop` para el borde superior
+* `android:layout_marginBottom` para el borde inferior
+* `android:layout_marginStart` para el borde inicial
+* `android:layout_marginEnd` para el borde final
+
+![image](./images/img20.png)
+
+### Agregar Padding
+
+* Agregamos un nuevo recurso de tipo `dimen` que se llame `small_padding` con un valor de `8dp`.
+* Asignamos el padding a nuestro TextView en la propiedad `paddingTop`.
+
+### Agregar Margin
+
+* Agregamos un nuevo recurso de tipo `dimen` que se llame `layout_margin` con un valor de `16dp`.
+* Asignamos el margin a nuestro TextView en la propiedad `layout_marginTop`.
+
+### Agregar una fuente
+
+* Seleccionamos nuestro TextView
+* Seleccionamos el atributo **fontFamily**
+* Desplegamos la lista, seleccionamos **más fuentes**.
+* Seleccionamos Roboto > Regular
+
+![image](./images/img21.png)
+
+## Agregar un ImageView
+
+* Desde la paleta de componentes arrastramos un `ImageView` justo debajo de nuestro TextView.
+* Nos aparece una ventana, seleccionamos la pestaña `drawable` y seleccionamos un recurso de imagen de lo que ya vienen por defecto en Android Studio.
+
+![image](./images/img22.png)
+
+* Seleccionamos el atributo id y le damos el valor de `star_image`
+* Seleccionamos la propiedad layout_marginTop y le damos el valor de `@dimen/layout_margin`.
+
+## Agregar un ScrollView
+
+1. Agregamos un nuevo recurso dimen:
+
+```xml
+<dimen name="layout_padding">16dp</dimen>
+```
+
+2. Agregamos un nuevo recurso string:
+
+```xml
+<string name="bio_text">Hi, my name is Juan. \n\nI love fish. \n\nThe kind that is alive and swims around in an aquarium or river, or a lake, and definitely the ocean. \nFun fact is that I have several aquariums and also a river. \n\nI like eating fish, too. Raw fish. Grilled fish. Smoked fish. Poached fish - not so much. \nAnd sometimes I even go fishing. \nAnd even less sometimes, I actually catch something. \n\nOnce, when I was camping in Canada, and very hungry, I even caught a large salmon with my hands. \n\nI\'ll be happy to teach you how to make your own aquarium. \nYou should ask someone else about fishing, though.\n\n</string>
+```
+
+3. Arrastramos un componente `ScrollView` y removemos el linear layout.
+
+4. Arrastramos un **TextView** dentro del **ScrollView**.
+
+5. Cambiamos el id de nuestro TextView a `@+id/bio_text`.
+
+6. Agregamos a las propiedades `paddingStart` y `paddingEnd` el valor de `@dimen/layout_padding`.
+
+7. Agregamos a la propiedad `text` el valor de `@string/bio_text`.
+
+8. Agregamos a la propiedad `lineSpacingMultiplier` el valor de `1.2`
+
+Nos queda de la siguiente forma:
+
+```xml
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/bio_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingStart="@dimen/layout_padding"
+        android:paddingEnd="@dimen/layout_padding"
+        android:text="@string/bio_text" />
+
+</ScrollView>
+
+```
+
+## Resultado final 👍
+
+Al final nuestra activity_main.xml debe queda de la siguiente forma:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/name_text"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/my_name" />
+
+    <ImageView
+        android:id="@+id/star_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:contentDescription="@string/yellow_star"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:ignore="ImageContrastCheck" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bio_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingStart="@dimen/layout_padding"
+            android:paddingEnd="@dimen/layout_padding"
+            android:text="@string/bio_text" />
+    </ScrollView>
+
+</LinearLayout>
+```
+
+Y al ejecutar la app:
+
+![image](./images/img23.png)
