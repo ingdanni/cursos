@@ -9,7 +9,7 @@ const config = {
   title: 'danny[dot]work',
   tagline: 'Cursos de desarrollo web y móvil',
   url: 'https://danny.work',
-  baseUrl: '/',
+  baseUrl: '/cursos/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
