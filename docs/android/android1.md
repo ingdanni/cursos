@@ -1,9 +1,18 @@
 ---
 id: android1
-title: Temario
+title: Desarrollo de aplicaciones Android
 ---
 
-## Primer parcial
+## Docente
+
+**Ing. Danny Narváez**
+
+* E-mail: [ing.danni@gmail.com](ing.danni@gmail.com)
+* Cel.: +505 81162325
+
+## Temario
+
+### Primer parcial
 
 | Semana     | Tema     |
 | :------------- | :------------- |
@@ -13,12 +22,23 @@ title: Temario
 | 4       | Tipos de layouts       |
 | 5       | Contraint layouts       |
 
-## Segundo parcial
+### Segundo parcial
 
 | Semana     | Tema     |
 | :------------- | :------------- |
 | 6       | Interactividad en actividades y fragmentos       |
-| 7       | Ciclo de vida y navegación de actividades y fragmentos       |
+| 7       | Ciclo de vida y navegación       |
 | 8       | Paso de parámetros entre fragmentos       |
 | 9       | Recycler Views       |
 | 10       | Retrofit       |
+
+## Evaluaciones
+
+* En cada parcial se harán 2 pruebas con un valor de *15pts*.
+* En cada parcial se harán 1 exámen con un valor de *20pts*
+
+## Enlaces importantes
+
+* [Kotlin playground](https://play.kotlinlang.org/)
+* [Documentación oficial de kotlin](https://kotlinlang.org/docs/home.html)
+* [Android Studio - Página de descarga y documentación](https://developer.android.com/studio)
