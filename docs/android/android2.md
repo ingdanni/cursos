@@ -75,8 +75,3 @@ Kotlin en la actualidad puede ser usado para:
 * Desarrollo Web frontend.
 * Aplicaciones server-side.
 * Data Science.
-
-## Enlaces
-
-* [Sitio web de Kotlin](https://kotlinlang.org/)
-* [Kotlin Playground](https://play.kotlinlang.org/)

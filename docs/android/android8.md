@@ -1,4 +1,7 @@
-# Fragments
+---
+id: android8
+title: Fragmentos
+---
 
 ## ¿Qué son?
 
@@ -30,7 +33,7 @@ Cada vez que usamos esta función para buscar una vista después de crearla o vo
 
 Una solución es crear un objeto que contenga una referencia a cada vista. Este objeto, llamado objeto Binding, puede ser utilizado por toda la aplicación. Esta técnica se denomina Data Binding (enlace de datos). Una vez que se ha creado un objeto de enlace para la aplicación, se puede acceder a las vistas y otros datos a través del objeto de enlace, sin tener que atravesar la jerarquía de vistas o buscar los datos.
 
-![image](./images/40.png)
+![image](/img/android/40.png)
 
 ### Ventajas
 
@@ -80,7 +83,6 @@ También debemos cortas las declaraciones del namespace de nuestros layouts orig
 1. En el folder **res/layout**, clic derecho, seleccionar **new/fragment/fragment (blank)**
 
 2. Definimos el nombre como `TitleFragment`
-
 
 ## Actualizar main activity
 
@@ -185,4 +187,4 @@ Dentro del LinearLayout en el MainActivity agregamos lo siguiente:
 
 Al correr la app tendremos el siguiente resultado:
 
-![image](./images/41.png)
+![image](/img/android/41.png)

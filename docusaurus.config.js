@@ -12,8 +12,8 @@ const config = {
   baseUrl: '/cursos/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'danny[dot]work', // Usually your GitHub org/user name.
+  // favicon: 'img/favicon.ico',
+  organizationName: 'ingdanni', // Usually your GitHub org/user name.
   projectName: 'cursos', // Usually your repo name.
   staticDirectories: ['static'],
 
@@ -25,7 +25,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         // blog: {
         //   showReadingTime: true,
@@ -111,13 +111,17 @@ const config = {
           //   ],
           // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} danny[dot]work, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} danny[dot]work. Managua, Nicaragua 🇳🇮`,
+      },
+      i18n: {
+        defaultLocale: 'en',
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ['kotlin'],
       },
+      plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
     }),
 };
 
