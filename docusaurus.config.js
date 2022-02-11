@@ -113,9 +113,9 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} danny[dot]work. Managua, Nicaragua 🇳🇮`,
       },
-      i18n: {
-        defaultLocale: 'en',
-      },
+      // i18n: {
+      //   defaultLocale: 'en',
+      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
