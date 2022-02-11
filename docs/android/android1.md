@@ -7,7 +7,7 @@ title: Desarrollo de aplicaciones Android
 
 **Ing. Danny Narváez**
 
-* E-mail: [ing.danni@gmail.com](ing.danni@gmail.com)
+* E-mail: [ing.danni@gmail.com](mailto:ing.danni@gmail.com)
 * Cel.: +505 81162325
 
 ## Temario
