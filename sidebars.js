@@ -30,15 +30,15 @@ const sidebars = {
         'android/android2',
         'android/android3',
         'android/android4',
-        // {
-        //   type: 'category',
-        //   label: 'Layouts',
-        //   items: [
-        //     'android/android5',
-        //     'android/android6',
-        //     'android/android7',
-        //   ]
-        // },
+        {
+          type: 'category',
+          label: 'Layouts',
+          items: [
+            'android/android5',
+            // 'android/android6',
+            // 'android/android7',
+          ]
+        },
         // 'android/android8',
         // 'android/android9',
       ],
