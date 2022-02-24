@@ -135,6 +135,10 @@ Además del archivo **build.gradle** a nivel de proyecto, cada módulo tiene un 
 
 ## 🏠 Clase practica
 
-* Investigar como correr una app Android en un dispositivo físico.
-* Crear una clase `(class)` en Kotlin que represente un `Estudiante` con las propiedades que estime conveniente (ej.: nombre, apellido, carné, edad, dirección, etc...) y su respectivo **constructor**.
-* Crear una función `(fun)` en Kotlin que reciba un arreglo de **Doubles** y retorne el promedio de los números del array.
+1. Investigar como correr una app Android en un dispositivo físico.
+
+2. En el playground de kotlin resolver los siguientes ejercicios de código:
+
+* Crear una clase `class` en Kotlin que represente un `Estudiante` con las propiedades que estime conveniente (ej.: nombre, apellido, carné, edad, dirección, etc...) y su respectivo **constructor**.
+
+* Crear una función `fun` en Kotlin que reciba un arreglo de **Doubles** y retorne el promedio de los números del array.
