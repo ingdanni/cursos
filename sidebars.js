@@ -35,7 +35,7 @@ const sidebars = {
           label: 'Layouts',
           items: [
             'android/android5',
-            // 'android/android6',
+            'android/android6',
             // 'android/android7',
           ]
         },
