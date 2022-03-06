@@ -39,6 +39,7 @@ const sidebars = {
             // 'android/android7',
           ]
         },
+        'android/exam1',
         // 'android/android8',
         // 'android/android9',
       ],
