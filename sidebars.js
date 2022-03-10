@@ -36,7 +36,7 @@ const sidebars = {
           items: [
             'android/android5',
             'android/android6',
-            // 'android/android7',
+            'android/android7',
           ]
         },
         'android/exam1',

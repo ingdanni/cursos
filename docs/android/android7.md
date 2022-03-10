@@ -22,7 +22,7 @@ Para crear un **ConstraintLayout** puede usar el editor de diseño para agregar 
 
 ## Crear proyecto
 
-* Se debe crear un proyecto nuevo y vacio, lenguaje **kotlin** y que se llame `ColorsApp`.
+* Se debe crear un proyecto nuevo y vacio, lenguaje **kotlin** y especificar cualquier nombre.
 
 * Abrir el activity_main.xml con la pestaña de diseño activada.
 
@@ -36,7 +36,7 @@ Para crear un **ConstraintLayout** puede usar el editor de diseño para agregar 
 
 ![image](/img/android/img27.png)
 
-### Constrain bias
+### Constraint Bias
 
 Coloca el elemento de vista a lo largo de los ejes horizontal y vertical. De forma predeterminada, la vista se centra entre las dos restricciones con un sesgo del 50%.
 
@@ -44,17 +44,17 @@ Coloca el elemento de vista a lo largo de los ejes horizontal y vertical. De for
 
 En el view inspector tenemos valores para margenes de arriba, abajo, izquierda y derecha con un valor por defecto de 0.
 
-### Tipo de constaint
+### Tipo de constraint
 
-* Wrap Content: el elemento se expande solamente cuanto necesite para mostrar su contenido. Simbolo `>>>`
+* **Wrap Content:** el elemento se expande solamente cuanto necesite para mostrar su contenido. Simbolo `>>>`
 
-* Fixed: se agrega una dimension como margen de vista en el cuadro de texto junto a las flechas. Simbolo `|---|`
+* **Fixed:** se agrega una dimension como margen de vista en el cuadro de texto junto a las flechas. Simbolo `|---|`
 
-* Match constraints: el elemento se expande tanto como sea posible para cumplir la constraint en cada lado, teniendo en cuenta los propios margenes de la vista. Este constraint es muy flexible y nos permite adaptar a diferentes tamaños y orientaciones de pantalla. Simbolo `|-vvv-|`
+* **Match constraints:** el elemento se expande tanto como sea posible para cumplir la constraint en cada lado, teniendo en cuenta los propios margenes de la vista. Este constraint es muy flexible y nos permite adaptar a diferentes tamaños y orientaciones de pantalla. Simbolo `|-vvv-|`
 
 ## Configurar TextView
 
-1. Para el top (superior) definimos un margin de 16
+1. Para el top (superior) definimos un margin de 16.
 
 2. Para izquierda y derecha definimos un margin de 16 y tipo match constraints.
 
@@ -62,7 +62,7 @@ En el view inspector tenemos valores para margenes de arriba, abajo, izquierda y
 
 ## Agregar estilos para los TextViews
 
-En styles.xml agregamos:
+Agregamos un archivo de recursos llamado **styles.xml** y agregamos:
 
 ```xml
 <style name="whiteBox">
@@ -74,7 +74,7 @@ En styles.xml agregamos:
 </style>
 ```
 
-En strings.xml agregamos:
+En el archivo **strings.xml** agregamos:
 
 ```xml
 <string name="box_one">Box one</string>
@@ -83,7 +83,6 @@ En strings.xml agregamos:
 <string name="box_four">Box four</string>
 <string name="box_five">Box five</string>
 ```
-
 
 A nuestro textView agregamos los atributos:
 
@@ -102,7 +101,7 @@ style="@style/whiteBox"
 
 ![image](/img/android/img28.png)
 
-3. Seleccionamos el punto izquiero y arrastramos hacia el borde izquiero del layout.
+3. Seleccionamos el punto izquiero y arrastramos hacia el borde izquierdo del layout.
 
 ![image](/img/android/img29.png)
 
@@ -148,37 +147,43 @@ Se define un estilo para distribuir y alinear los elementos de una cadena.
 
 1. Arrastramos 3 TextViews debajo de box one y a la derecha de box two.
 
-2. Agregamos estilos, strings y IDs para los elementos.
+2. Agregamos **estilos, strings y IDs** para los elementos.
 
-3. Seleccionamos los 3 elementos, damos clic derecho, seleccionamos chains y luego create vertical chain.
+3. Seleccionamos los 3 elementos, damos clic derecho, seleccionamos **chains** y luego **create vertical chain**.
 
 ![img](/img/android/33.png)
 
-4. Agregamos un constraint del top de Box Three hacia el top de Box Two.
+4. Agregamos un constraint del **top** de **Box Three** hacia el **top** de **Box Two**.
 
 ![img](/img/android/34.png)
 
-5. Agregamos un constraint del bottom de Box Five hacia el bottom de Box Two.
+5. Agregamos un constraint del **bottom** de **Box** Five hacia el **bottom** de **Box Two**.
 
 ![img](/img/android/35.png)
 
 ### Agregar constrains a los lados
 
-1. Agregamos un constraint de la izquierda de Box Three hacia la derecha de Box Two.
+1. Agregamos un constraint de la izquierda de **Box Three** hacia la derecha de **Box Two**.
 
-2. Agregamos un constraint de la derecha de Box Three hacia la derecha del Layout.
+2. Agregamos un constraint de la derecha de **Box Three** hacia la derecha del Layout.
 
-3. Repetir los dos pasos anteriores para Box Four y Box Five.
+3. Repetir los dos pasos anteriores para **Box Four** y **Box Five**.
 
 ![img](/img/android/36.png)
 
 ### Agregar margin
 
-1. Box Three agregar margen de 16dp a la izquierda y derecha.
+1. **Box Three** agregar **margin** de **16dp** a la izquierda y derecha.
 
-2. Box Four agregar margen de 16dp a cada lado.
+2. Repetir el paso anterior para **Box Four** y **Box Five**.
 
-3. Box Five agregar margen de 16dp a la izquierda y derecha.
+### Definir chain style
+
+En el primer TextView (Box three) de la cadena agregar el siguiente atributo para definir el estilo de la cadena:
+
+```
+app:layout_constraintVertical_chainStyle="spread_inside"
+```
 
 ![img](/img/android/37.png)
 
