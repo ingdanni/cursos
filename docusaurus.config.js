@@ -56,6 +56,18 @@ const config = {
             position: 'left',
             label: 'Android',
           },
+          {
+            type: 'doc',
+            docId: 'flutter/flutter1',
+            position: 'left',
+            label: 'Flutter'
+          },
+          {
+            type: 'doc',
+            docId: 'about',
+            position: 'right',
+            label: 'Docente'
+          },
           // {
           //   to: '/blog',
           //   label: 'Blog',
@@ -78,6 +90,10 @@ const config = {
                 label: 'Android',
                 to: '/docs/android/android1',
               },
+              {
+                label: 'Flutter',
+                to: '/docs/flutter/flutter1',
+              },
             ],
           },
           {
@@ -86,10 +102,6 @@ const config = {
               {
                 label: 'LinkedIn',
                 href: 'https://www.linkedin.com/in/dannynarvaez/',
-              },
-              {
-                label: 'Instragram',
-                href: 'https://www.instagram.com/rx__danny/',
               },
               {
                 label: 'Whatsapp',
@@ -119,7 +131,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['kotlin'],
+        additionalLanguages: ['kotlin', 'dart'],
       },
       plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
     }),
