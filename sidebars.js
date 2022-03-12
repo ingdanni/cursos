@@ -21,6 +21,23 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
+  flutterSidebar: [
+    {
+      type: 'category',
+      label: 'Primer parcial',
+      items: [
+        'flutter/flutter1',
+        {
+          type: 'category',
+          label: 'Lenguaje Dart',
+          items: [
+              'flutter/flutter2',
+          ]
+        }
+      ]
+    }
+  ],
+
   androidSidebar: [
     'android/android1',
     {
