@@ -1,6 +1,6 @@
 ---
 id: flutter5
-title: Introducción a Flutter
+title: Flutter Widgets
 ---
 
 ## Estructura del proyecto
