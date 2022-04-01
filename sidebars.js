@@ -65,6 +65,15 @@ const sidebars = {
         'android/exam1',
       ],
     },
+    {
+      type: 'category',
+      label: 'Segundo Parcial',
+      items: [
+        'android/android11',
+        'android/android12',
+        'android/android13',
+      ]
+    },
   ],
 
 };
