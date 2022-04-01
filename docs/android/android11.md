@@ -257,7 +257,7 @@ En la clase `ThirdFragment` dejamos nuestro codigo de la siguiente forma:
 ```kotlin
 class ThirdFragment : Fragment() {
 
-    lateinit var navigateButton: Button
+    lateinit var backButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -266,9 +266,9 @@ class ThirdFragment : Fragment() {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_third, container, false)
 
-        navigateButton = view.findViewById(R.id.back_button)
+        backButton = view.findViewById(R.id.back_button)
 
-        navigateButton.setOnClickListener {
+        backButton.setOnClickListener {
 
         }
 

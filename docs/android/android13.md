@@ -3,7 +3,6 @@ id: android13
 title: Navegación - parte 3
 ---
 
-
 ## Cambiar destino del botón "Atrás"
 
 El sistema operativo mantiene un seguimiento de la navegación del usuario. Cada vez que el usuario se va a una nueva pantalla, se agrega la pantalla a la pila (back stack).
@@ -20,29 +19,26 @@ A través de una acción de navegación (navigation action) podemos modificar el
 
 ### Actualizar action
 
-1. Abrimos el archivo navigation.xml
+1. Abrimos el archivo `navigation.xml`
 
-2. seleccionamos la acción `action_secondFragment_to_thirdFragment` que navega desde seconFragment hacia thirdFragment.
+2. seleccionamos la acción `action_secondFragment_to_thirdFragment` que navega desde SeconFragment hacia ThirdFragment.
 
-3. En el panel de atributos, verificar que el atributo `popUpTo` está definido hacia secondFragment y seleccionamos popUpToInclusive en true.
+3. En el panel de atributos, cambiar que el atributo `popUpTo` sea definido hacia `SecondFragment` y seleccionamos popUpToInclusive en `true`.
 
-4. Corremos la app, al navegar hacia thirdFragment y presionar el botón atrás del sistema, nos lleva hacia el primer fragmento (titleFragment) ignorando el segundo fragmento (secondFragment).
+4. Corremos la app, al navegar hacia `ThirdFragment` y presionar el botón atrás del sistema, nos lleva hacia el primer fragmento (FirstFragment) ignorando el segundo fragmento (SecondFragment).
 
 ![Image](/img/android/45.png)
 
 ### Navegar hacia atrás con un clickListener
 
-1. Definimos un action desde thirdFragment hacia secondFragment.
+1. Definimos un action desde `ThirdFragment` hacia `SecondFragment`.
 
 2. Verificar que el **ID** del action sea `action_thirdFragment_to_secondFragment`.
 
-3. En nuestra archivo `ThirdFragment.kt` agregamos un clickListener al botón `backButton`, dentro del clickListener invocamos la función `navigate()` para llamar la acción:
+3. En nuestra clase `ThirdFragment` agregamos dentro del clickListener del botón `backButton` la función `navigate()` para llamar la acción:
 
 ```kotlin
-binding.backButton.setOnClickListener {
-    it.findNavController()
-      .navigate(R.id.action_thirdFragment_to_secondFragment)
-}
+it.findNavController().navigate(R.id.action_thirdFragment_to_secondFragment)
 ```
 
 ### Agregar un botón atrás en el App Bar
@@ -51,7 +47,7 @@ El **App Bar** también llamada **action bar**, es un espacio en el que podemos 
 
 El botón por defecto tiene un ícono de una flecha `<--`, este botón solo navega dentro de la app. Nunca se usaria para sacar al usuario del app.
 
-1. Abrimos el archivo `MainActivity.kt`. Dentro de la función `onCreate()`, agregamos el siguiente codigo para encontrar el objeto navigation controller:
+1. Abrimos la clase `MainActivity`. Dentro de la función `onCreate()`, agregamos el siguiente codigo para encontrar el objeto navigation controller:
 
 ```kt
 val navController = this.findNavController(R.id.mainNavHostFragment)
@@ -60,7 +56,7 @@ val navController = this.findNavController(R.id.mainNavHostFragment)
 2. También dentro de la función `onCreate()`, enlazamos el navigation controller con el app bar:
 
 ```kt
-NavigationUI.setupActionBarWithNavController(this,navController)
+NavigationUI.setupActionBarWithNavController(this, navController)
 ```
 
 3. Después de la función `onCreate()`, sobreescribimos la función `onSupportNavigateUp()` para llamar la función `navigateUp()` del navigation controller:
@@ -73,8 +69,6 @@ override fun onSupportNavigateUp(): Boolean {
 ```
 
 4. Ejecutamos la app y veremos en la barra aparace el botón atrás.
-
-![image](/img/android/46.png)
 
 ## Agregar menú de opciones
 
@@ -90,13 +84,13 @@ En Android tenemos diferentes tipos de menus, uno de ellos es **options menu**. 
 
 5. Desde la paleta de componentes arrastramos un **Menu Item**.
 
-6. Seleccionamos el nuevo **Menu Item** y definimos el ID como **aboutFragment** y el title **Acerca de**.
+6. Seleccionamos el nuevo **Menu Item** y definimos el ID como **secondFragment** y el title **Ir a segundo fragmento**.
 
-7. Realizamos el mismo proceso para **findUsFragment**.
+7. Agregamos otro Menu Item y realizamos el mismo proceso para ir a **ThirdFragment**.
 
 > IMPORTANTE: Si usamos el mismo ID en nuestro menu item que el ID del fragment en el navigation graph. Hará que el proceso sea más simple.
 
-8. En el archivo `TitleFragment.kt` en el metodo **onCreateView()**, antes del return, llamamos la función **setHasOptionsMenu** y le mandamos parametro **true**.
+8. En la clase `FirstFragment` en el metodo **onCreateView()**, antes del return, llamamos la función **setHasOptionsMenu** y le mandamos parametro **true**.
 
 ```kotlin
 setHasOptionsMenu(true)
