@@ -37,6 +37,8 @@ const sidebars = {
           ]
         },
         'flutter/flutter5',
+        'flutter/flutter6',
+        'flutter/flutter7',
       ]
     }
   ],
