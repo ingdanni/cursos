@@ -74,6 +74,8 @@ const sidebars = {
         'android/android11',
         'android/android12',
         'android/android13',
+        'android/android14',
+        'android/android15',
       ]
     },
   ],
