@@ -19,7 +19,7 @@ title: Examen primer parcial
 
 ## Indicaciones
 
-* Investigar sobre `Statefull Widgets en Flutter`.
+* Investigar sobre `Stateful Widgets en Flutter`.
 
 * Completar en el código fuente el cálculo necesario para mostrar al usuario el resultado de la conversión ya sea Dólar/Córdoba y Córdoba/Dólar.
 
