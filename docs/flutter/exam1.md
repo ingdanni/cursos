@@ -29,8 +29,8 @@ title: Examen primer parcial
 
 ## Entrega
 
-* Domingo 8 de Marzo.
+* Domingo 8 de Mayo.
 
 * Enviar por correo un archivo o enlace de descarga comprimido en ZIP (no RAR).
 
-* Valor 20pts
+* Valor **20pts**
