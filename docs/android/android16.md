@@ -50,41 +50,35 @@ fun obtenerListaDeEstudiantes(): List<Estudiante> {
 En el archivo **estudiante_row_item.xml** agregamos el siguiente layout que contiene un LinearLayout y 3 etiquetas de tipo `TextView` con sus configuraciones correspondientes. Este layout se utilizará para cada celda de nuestra lista en el **RecyclerView**.
 
 ```xml
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
-    android:gravity="center_vertical">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/nombre_textView"
+        android:textSize="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Estudiante"/>
 
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/carne_textView"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carne"/>
 
-        <TextView
-            android:id="@+id/nombre_textView"
-            android:textSize="22dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre Estudiante"/>
-
-        <TextView
-            android:id="@+id/carne_textView"
-            android:textSize="18dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Carne"/>
-
-        <TextView
-            android:id="@+id/telefono_textView"
-            android:textSize="18dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Telefono"/>
-    </LinearLayout>
-</FrameLayout>
+    <TextView
+        android:id="@+id/telefono_textView"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono"/>
+</LinearLayout>
 ```
 
 ## Agregar clase ViewHolder
@@ -161,19 +155,11 @@ Por último vamos a configurar nuestro **RecyclerView** y **Adapter** en nuestra
 1. En nuestro archivo **activity_main.xml** agregamos un **RecyclerView** quedando de la siguiente forma:
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <androidx.recyclerview.widget.RecyclerView
+<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</LinearLayout>
 ```
 
 2. En la clase **MainActivity** dentro de la función **onCreate** agregamos:
