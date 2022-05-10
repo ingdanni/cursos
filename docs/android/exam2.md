@@ -19,4 +19,4 @@
 
 * Enviar proyecto comprimido en `ZIP` (No enviar RAR).
 * Valor `20pts`.
-* Fecha de entrega: Viernes 13, Mayo
+* Fecha de entrega: Viernes 13, Mayo.
