@@ -81,6 +81,7 @@ const sidebars = {
         'android/android16',
         'android/android17',
         'android/android18',
+        'android/exam2',
       ]
     },
   ],
