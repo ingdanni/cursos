@@ -42,6 +42,17 @@ const sidebars = {
         'flutter/flutter8',
         'flutter/flutter-exam1',
       ]
+    },
+    {
+      type: 'category',
+      label: 'Segundo parcial',
+      items: [
+        'flutter/flutter9',
+        'flutter/flutter10',
+        'flutter/flutter11',
+        'flutter/flutter12',
+        'flutter/flutter13',
+      ]
     }
   ],
 
