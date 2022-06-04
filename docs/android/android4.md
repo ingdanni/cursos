@@ -133,7 +133,7 @@ Además del archivo **build.gradle** a nivel de proyecto, cada módulo tiene un 
 
 > IMPORTANTE: Las imagenes usan mucho espacio en disco. Si hay un enlace de descarga a la par de la imagen quiere decir que la imagen no está instalada. Clic en el enlace descarga (puede tomar bastante tiempo). Cuando se complete la descarga, clic en finalizar.
 
-## 🏠 Clase practica
+## 🏠 Clase práctica
 
 1. Investigar como correr una app Android en un dispositivo físico.
 

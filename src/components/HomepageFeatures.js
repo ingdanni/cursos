@@ -21,20 +21,20 @@ const FeatureList = [
       </>
     ),
   },
-  {
-    title: 'Diseño web',
-    Svg: require('../../static/img/html5.svg').default,
-    description: (
-      <>
-        Diseño web con HTML5 y CSS3.
-      </>
-    ),
-  },
+  // {
+  //   title: 'Diseño web',
+  //   Svg: require('../../static/img/html5.svg').default,
+  //   description: (
+  //     <>
+  //       Diseño web con HTML5 y CSS3.
+  //     </>
+  //   ),
+  // },
 ];
 
 function Feature({Svg, title, description}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--6')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} alt={title} />
       </div>

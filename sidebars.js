@@ -62,44 +62,38 @@ const sidebars = {
   ],
 
   androidSidebar: [
-    'android/android1',
     {
       type: 'category',
       label: 'Primer parcial',
       items: [
+        'android/android1',
         'android/android2',
         'android/android3',
         'android/android4',
-        {
-          type: 'category',
-          label: 'Layouts',
-          items: [
-            'android/android5',
-            'android/android6',
-            'android/android7',
-          ]
-        },
+        'android/android5',
+        'android/android6',
+        'android/android7',
         'android/android8',
         'android/android9',
         'android/android10',
-        'android/exam1',
+        // 'android/exam1',
       ],
     },
-    {
-      type: 'category',
-      label: 'Segundo Parcial',
-      items: [
-        'android/android11',
-        'android/android12',
-        'android/android13',
-        'android/android14',
-        'android/android15',
-        'android/android16',
-        'android/android17',
-        'android/android18',
-        'android/exam2',
-      ]
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Segundo Parcial',
+    //   items: [
+    //     'android/android11',
+    //     'android/android12',
+    //     'android/android13',
+    //     'android/android14',
+    //     'android/android15',
+    //     'android/android16',
+    //     'android/android17',
+    //     'android/android18',
+    //     'android/exam2',
+    //   ]
+    // },
   ],
 
 };
