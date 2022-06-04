@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'danny[dot]work',
-  tagline: 'Cursos de desarrollo web y móvil',
+  tagline: 'Cursos de desarrollo desarrollo de aplicaciones móviles',
   url: 'https://danny.work',
   baseUrl: '/cursos/',
   onBrokenLinks: 'throw',

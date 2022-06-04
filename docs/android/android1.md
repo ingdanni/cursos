@@ -7,8 +7,9 @@ title: Desarrollo de aplicaciones Android
 
 **Ing. Danny Narváez**
 
-* E-mail: [ing.danni@gmail.com](mailto:ing.danni@gmail.com)
-* Cel.: +505 81162325
+* Email personal: [ing.danni@gmail.com](mailto:ing.danni@gmail.com)
+* Email para entrega de tareas: [cursos@danny.work](cursos@danny.work)
+* Cel: +50581162325
 
 ## Temario
 
@@ -34,8 +35,8 @@ title: Desarrollo de aplicaciones Android
 
 ## Evaluaciones
 
-* En cada parcial se harán 2 pruebas con un valor de *15pts*.
-* En cada parcial se harán 1 exámen con un valor de *20pts*
+* En cada parcial se harán 2 pruebas con un valor de **15pts**.
+* En cada parcial se harán 1 exámen con un valor de **20pts**
 
 ## Enlaces importantes
 
