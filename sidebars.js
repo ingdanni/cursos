@@ -55,8 +55,8 @@ const sidebars = {
         'flutter/flutter14',
         'flutter/flutter15',
         'flutter/flutter16',
-        // tareas
         'flutter/hw-wsp-clone',
+        'flutter/flutter17',
       ]
     }
   ],
