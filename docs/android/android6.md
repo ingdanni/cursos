@@ -176,15 +176,3 @@ Al final nuestro archivo `activity_main.xml` debe quedar de la siguiente forma:
 Y al ejecutar la aplicación:
 
 ![image](/img/android/img23.png)
-
-## 💻 Clase práctica
-
-* Crear un linear layout que muestre la siguiente información del alumno:
-
-    * Nombre completo.
-    * Carrera y número de carné.
-    * Lista de cursos que estudia en el semestre actual.
-
-* Investigar como agregar recursos de imágenes a un proyecto de Android Studio y agregar una imagen (de una persona) al perfil del alumno.
-
-* Se deben usar los elementos de UI TextView, ScrollView e ImageView. Agregando estilos para mejorar la apariencia.

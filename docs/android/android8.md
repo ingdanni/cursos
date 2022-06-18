@@ -105,8 +105,8 @@ Dentro del LinearLayout en el MainActivity agregamos lo siguiente:
 </fragment>
 ```
 
-## Resultado final
+<!-- ## Resultado final
 
 Al correr la app tendremos el siguiente resultado:
 
-![image](/img/android/41.png)
+![image](/img/android/41.png) -->
