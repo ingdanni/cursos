@@ -21,6 +21,4 @@ title: Tarea Clon de Whatsapp
 
 * Enviar enlace del repositorio al correo: **upoli@danny.work**
 
-* Valor **10pts**.
-
 * La entrega es individual.

@@ -57,6 +57,7 @@ const sidebars = {
         'flutter/flutter16',
         'flutter/hw-wsp-clone',
         'flutter/flutter17',
+        'flutter/flutter18',
       ]
     }
   ],
