@@ -1,6 +1,6 @@
 ---
 id: android7
-title: Constraint layouts
+title: Constraint Layout
 ---
 
 Es un `ViewGroup` que permite posicionar y dimensionar las vistas de una manera flexible, creando diseños grandes y complejos con jerarquias de vista.
@@ -9,30 +9,30 @@ Para crear un **ConstraintLayout** puede usar el editor de diseño para agregar 
 
 ## ¿Qué es un Constraint?
 
- Es una conexión o alineación entre 2 elementos del UI (User Interface). Cada constraint conecta o alinea una vista con otra o al layout padre. En un **ConstraintLayout**, se posiciona un elemento definiendo al menos un constraint horizontal o vertical.
+ Es una conexión o alineación entre 2 elementos del UI (User Interface). Cada constraint conecta o alinea una vista con otra o al layout padre. En un **ConstraintLayout** se posiciona un elemento definiendo al menos un constraint horizontal o vertical.
 
  ![image](/img/android/img25.png)
 
-1. Constraint horizontal: B siempre debe estar a la derecha de A. (En una app real B tambien necesitaria al menos un constraint vertical adicional)
+1. **Constraint horizontal**: B siempre debe estar a la derecha de A. (En una app real B tambien necesitaria al menos un constraint vertical adicional)
 
-2. Constraint vertical: C siempre debe permanecer debajo de A. (En una app real C tambien necesitaria al menos un constraint horizontal adicional)
+2. **Constraint vertical**: C siempre debe permanecer debajo de A. (En una app real C tambien necesitaria al menos un constraint horizontal adicional)
 
-> 💡 Un constraint puede definirse como una regla que se debe cumplir para nuestro layout.
+> 💡 Un constraint puede definirse como una regla que se debe cumplir en nuestro layout.
 
 
-## Crear proyecto
+## Proyecto incial
 
 * Se debe crear un proyecto nuevo y vacio, lenguaje **kotlin** y especificar cualquier nombre.
 
-* Abrir el activity_main.xml con la pestaña de diseño activada.
+* Abrir el `activity_main.xml` con la pestaña de diseño activada.
 
 * Agregaremos constraints manualmente entonces en el toolbar desactivamos la opcion `Autoconnect`.
 
-* Siempre en el toolbar agregamos margin de `16dp`. (por defecto es 8dp)
+* En el toolbar también agregamos margen de `16dp` en la opción **margin defaults**.
 
 ![image](/img/android/img26.png)
 
-* Seleccionamos el text view del activity para ver sus atributos y visualizar el **View Inspector** que incluye controles para atributos de diseño como constraints, tipos de constraints, constraint bias y margenes de vista.
+* Seleccionamos el text view que está dentro del activity para ver sus atributos y mostrar el **View Inspector** que incluye controles para atributos de diseño como constraints, tipos de constraints, constraint bias y margenes de vista.
 
 ![image](/img/android/img27.png)
 
@@ -51,6 +51,8 @@ En el view inspector tenemos valores para margenes de arriba, abajo, izquierda y
 * **Fixed:** se agrega una dimension como margen de vista en el cuadro de texto junto a las flechas. Simbolo `|---|`
 
 * **Match constraints:** el elemento se expande tanto como sea posible para cumplir la constraint en cada lado, teniendo en cuenta los propios margenes de la vista. Este constraint es muy flexible y nos permite adaptar a diferentes tamaños y orientaciones de pantalla. Simbolo `|-vvv-|`
+
+> Para cambiar el tipo de constraint se debe presionar sobre el símbolo del constraint en el View Inspector.
 
 ## Configurar TextView
 
@@ -95,7 +97,7 @@ style="@style/whiteBox"
 
 ## Agregar segundo TextView
 
-1. Arrastramos un TextView debajo del 'Box One' en el activity.
+1. Arrastramos un TextView debajo de 'Box One' en el activity.
 
 2. Seleccionamos el nuevo TextView y creamos un constraint hacia el elemento de arriba. Manteniendo presionado el punto superior (constraint handle) y arrastrando hacia el punto inferior de 'Box One'
 
@@ -123,9 +125,9 @@ android:layout_height="130dp"
 
 Una cadena es un grupo de elementos que estan enlazadas entre si por constaints bidireccionales y pueden ser distribuidas horizontal o verticalmente.
 
-### Cabeza de la cadena (head of the chain)
+### Cabeza de la cadena (head)
 
-El primer elemento de una cadena se le llama **head**. Los atributos que se le asignen son distribuidos a los demás elementos de la cadena. Para una cadena horizontal el head seria la primera a la izquierda y en una cadena vertical el head seria la primer desde arriba.
+El primer elemento de una cadena se le llama **head**. Los atributos que se le asignen son distribuidos a los demás elementos de la cadena. Para una cadena horizontal el head sería la primera a la izquierda y en una cadena vertical el head seria la primera desde arriba.
 
 ![image](/img/android/31.png)
 
@@ -145,9 +147,9 @@ Se define un estilo para distribuir y alinear los elementos de una cadena.
 
 ## Agregar una cadena a nuestro activity
 
-1. Arrastramos 3 TextViews debajo de box one y a la derecha de box two.
+1. Arrastramos **3 TextViews** debajo de **box one** y a la derecha de **box two**.
 
-2. Agregamos **estilos, strings y IDs** para los elementos.
+2. Agregamos **estilo, texto y Id** para los elementos.
 
 3. Seleccionamos los 3 elementos, damos clic derecho, seleccionamos **chains** y luego **create vertical chain**.
 
@@ -157,15 +159,15 @@ Se define un estilo para distribuir y alinear los elementos de una cadena.
 
 ![img](/img/android/34.png)
 
-5. Agregamos un constraint del **bottom** de **Box** Five hacia el **bottom** de **Box Two**.
+5. Agregamos un constraint del **bottom** de **Box Five** hacia el **bottom** de **Box Two**.
 
 ![img](/img/android/35.png)
 
 ### Agregar constrains a los lados
 
-1. Agregamos un constraint de la izquierda de **Box Three** hacia la derecha de **Box Two**.
+1. Agregamos un constraint de la izquierda de **Box Three** hacia la derecha de **Box Two** (de tipo match constraint).
 
-2. Agregamos un constraint de la derecha de **Box Three** hacia la derecha del Layout.
+2. Agregamos un constraint de la derecha de **Box Three** hacia la derecha del Layout (de tipo match constraint).
 
 3. Repetir los dos pasos anteriores para **Box Four** y **Box Five**.
 
@@ -177,6 +179,10 @@ Se define un estilo para distribuir y alinear los elementos de una cadena.
 
 2. Repetir el paso anterior para **Box Four** y **Box Five**.
 
+3. En **Box Three** agregamos margin top de **0dp**.
+
+4. En **Box Five** agregamos margin bottom de **0dp**.
+
 ### Definir chain style
 
 En el primer TextView (Box three) de la cadena agregar el siguiente atributo para definir el estilo de la cadena:
@@ -187,7 +193,13 @@ app:layout_constraintVertical_chainStyle="spread_inside"
 
 ![img](/img/android/37.png)
 
-## Resultado final
+### Ejecutar la app
+
+Al ejecutar nuestra app en el emulador podemos ver el resultado y si giramos el dispositivo los elementos deben alinearse según sus constraints.
+
+[Proyecto finalizado](./assets/ConstraintLayoutExample1.zip)
+
+<!-- ## Resultado final
 
 ### Vertical
 
@@ -195,4 +207,4 @@ app:layout_constraintVertical_chainStyle="spread_inside"
 
 ### Horizontal
 
-![img](/img/android/39.png)
+![img](/img/android/39.png) -->

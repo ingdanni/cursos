@@ -1,6 +1,6 @@
 ---
 id: android5
-title: Linear layout
+title: Linear Layout
 ---
 
 ## Contenido

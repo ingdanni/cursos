@@ -57,6 +57,7 @@ const sidebars = {
         'flutter/flutter16',
         'flutter/hw-wsp-clone',
         'flutter/flutter17',
+        'flutter/flutter18',
       ]
     }
   ],
@@ -72,6 +73,7 @@ const sidebars = {
         'android/android4',
         'android/android5',
         'android/android6',
+        'android/assesment1', // tarea 1
         'android/android7',
         'android/android8',
         'android/android9',
