@@ -78,24 +78,24 @@ const sidebars = {
         'android/android8',
         'android/android9',
         'android/android10',
-        // 'android/exam1',
+        'android/exam1',
       ],
     },
-    // {
-    //   type: 'category',
-    //   label: 'Segundo Parcial',
-    //   items: [
-    //     'android/android11',
-    //     'android/android12',
-    //     'android/android13',
-    //     'android/android14',
-    //     'android/android15',
-    //     'android/android16',
-    //     'android/android17',
-    //     'android/android18',
-    //     'android/exam2',
-    //   ]
-    // },
+    {
+      type: 'category',
+      label: 'Segundo Parcial',
+      items: [
+        'android/android11',
+        'android/android12',
+        'android/android13',
+        'android/android14',
+        // 'android/android15',
+        // 'android/android16',
+        // 'android/android17',
+        // 'android/android18',
+        // 'android/exam2',
+      ]
+    },
   ],
 
 };

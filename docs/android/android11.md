@@ -3,7 +3,7 @@ id: android11
 title: Navegación - parte 1
 ---
 
-Vamos a remotar el proyecto de la sección de `Fragments` para esta sección e implementaremos lo siguiente:
+Vamos a remotar el proyecto de la sección de `Fragmentos` para esta sección e implementaremos lo siguiente:
 
 * Crear un **navigation graph** para nuestros fragmentos usando la libreria de navegación y el editor de navegación.
 
