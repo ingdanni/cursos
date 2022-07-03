@@ -1,6 +1,6 @@
 ---
 id: android13
-title: Navegación - parte 3
+title: Navegación - Parte 3
 ---
 
 ## Cambiar destino del botón "Atrás"
@@ -40,35 +40,6 @@ A través de una acción de navegación (navigation action) podemos modificar el
 ```kotlin
 it.findNavController().navigate(R.id.action_thirdFragment_to_secondFragment)
 ```
-
-### Agregar un botón atrás en el App Bar
-
-El **App Bar** también llamada **action bar**, es un espacio en el que podemos agregar algunas opciones de navegación, en este caso vamos a agregar un botón de navegación hacia atrás.
-
-El botón por defecto tiene un ícono de una flecha `<--`, este botón solo navega dentro de la app. Nunca se usaria para sacar al usuario del app.
-
-1. Abrimos la clase `MainActivity`. Dentro de la función `onCreate()`, agregamos el siguiente codigo para encontrar el objeto navigation controller:
-
-```kt
-val navController = this.findNavController(R.id.mainNavHostFragment)
-```
-
-2. También dentro de la función `onCreate()`, enlazamos el navigation controller con el app bar:
-
-```kt
-NavigationUI.setupActionBarWithNavController(this, navController)
-```
-
-3. Después de la función `onCreate()`, sobreescribimos la función `onSupportNavigateUp()` para llamar la función `navigateUp()` del navigation controller:
-
-```kt
-override fun onSupportNavigateUp(): Boolean {
-    val navController = this.findNavController(R.id.mainNavHostFragment);
-    return navController.navigateUp()
-}
-```
-
-4. Ejecutamos la app y veremos en la barra aparace el botón atrás.
 
 ## Agregar menú de opciones
 
