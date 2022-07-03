@@ -3,21 +3,15 @@ id: android11
 title: Navegación - Parte 1
 ---
 
-Vamos a remotar el proyecto de la sección de `Fragmentos` para esta sección e implementaremos lo siguiente:
-
-* Crear un **navigation graph** para nuestros fragmentos usando la libreria de navegación y el editor de navegación.
-
-* Implementar un **Up button** para que podamos navegar hacia atrás.
-
-* Agregar navegación usando un **options menu**.
+Vamos a descargar el proyecto en el siguiente [Enlace](./assets/NavigationInFragments.zip)
 
 ## Agregar navigation components
 
 ### Agregar dependencias
 
-**Navigation components** es una libreria que nos permite manejar navegación compleja y animaciones de transición.
+**Navigation Components** es una libreria que nos permite manejar navegación compleja y animaciones de transición.
 
-Se debe agregar en nuestro archivo Gradle, abrimos Gradle scripts y doble clic en **build.gradle (project:)** y agregamos lo siguiente dentro de `buildScript`
+Se debe agregar en nuestro archivo Gradle, abrimos Gradle scripts y doble clic en **build.gradle (project:)** y agregamos lo siguiente dentro de `buildScript`:
 
 ```
 buildscript {
@@ -34,7 +28,7 @@ implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
 implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 ```
 
-### Agregar navigation graph
+### Agregar Navigation Graph
 
 * Nos colocamos sobre el folder `res`, clic derecho, seleccionamos **new > Android Resource File**.
 
@@ -58,12 +52,12 @@ Para definir el `NavHostFragment` nos vamos a nuestro `activity_main.xml` y lo a
 
 ```xml
 <fragment
-        android:id="@+id/mainNavHostFragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:navGraph="@navigation/navigation"
-        app:defaultNavHost="true" />
+    android:id="@+id/mainNavHostFragment"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:navGraph="@navigation/navigation"
+    app:defaultNavHost="true" />
 ```
 
 1. Asignamos un ID para el fragment: `mainNavHostFragment`
