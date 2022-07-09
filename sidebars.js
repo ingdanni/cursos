@@ -88,9 +88,9 @@ const sidebars = {
       items: [
         'android/android11',
         'android/android12',
-        // 'android/android13',
-        // 'android/android14',
-        // 'android/android15',
+        'android/android13',
+        'android/android14',
+        'android/android15',
         // 'android/android16',
         // 'android/android17',
         // 'android/android18',

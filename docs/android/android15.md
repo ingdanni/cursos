@@ -1,9 +1,17 @@
 ---
 id: android15
-title: Navegación - Parte 5
+title: Navegación - Tarea
 ---
 
-## Navegar hacia otro Activity
+## Orientaciones
+
+* Investigar y crear un ejemplo de como Navegar y pasar parámetros entre actividades haciendo uso de `Intents`.
+
+* Valor: 10pts
+
+* Fecha de entrega: Julio, 17
+
+<!-- ## Navegar hacia otro Activity
 
 En algunas ocasiones es necesario mostrar otro `Activity` en vez de trabajar con `Fragmentos`.
 
@@ -117,4 +125,4 @@ Para agregar un botón **Up**, se debe declarar qué actividad es el padre lógi
 </activity>
 ```
 
-[ **Descargar Proyecto Finalizado**](./assets/class7_final.zip)
+[ **Descargar Proyecto Finalizado**](./assets/class7_final.zip) -->

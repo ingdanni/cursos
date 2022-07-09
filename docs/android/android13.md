@@ -3,49 +3,17 @@ id: android13
 title: Navegación - Parte 3
 ---
 
-## Cambiar destino del botón "Atrás"
+## Menú de opciones (Options Menu)
 
-El sistema operativo mantiene un seguimiento de la navegación del usuario. Cada vez que el usuario se va a una nueva pantalla, se agrega la pantalla a la pila (back stack).
+### Descargar proyecto inicial
 
-Cuando el usuario presiona el botón atrás del sistema, la aplicación se dirige al destino que esta de último en la pila. Por defecto, el último en la pila es la pantalla que el usuario vió anteriormente.
+* [PROYECTO INICIAL ⬇️](./assets/NavigationInFragments_Part3_Starter.zip)
 
-A través de una acción de navegación (navigation action) podemos modificar el comportamiento de la pila.
+### Agregar menú
 
-### Pop behavior
+En Android tenemos diferentes tipos de Menú, uno de ellos es el **Options Menu**. Este aparece en el app bar y por defecto está representado por 3 puntos verticales.
 
-* El atributo `popUpTo` de un **action** define el destino del botón atrás.
-
-* Si el atributo `popUpToInclusive` es **true** remueve el elemento actual en la pila. Si es **false** deja el elemento actual en la pila.
-
-### Actualizar action
-
-1. Abrimos el archivo `navigation.xml`
-
-2. seleccionamos la acción `action_secondFragment_to_thirdFragment` que navega desde SeconFragment hacia ThirdFragment.
-
-3. En el panel de atributos, cambiar que el atributo `popUpTo` sea definido hacia `SecondFragment` y seleccionamos popUpToInclusive en `true`.
-
-4. Corremos la app, al navegar hacia `ThirdFragment` y presionar el botón atrás del sistema, nos lleva hacia el primer fragmento (FirstFragment) ignorando el segundo fragmento (SecondFragment).
-
-![Image](/img/android/45.png)
-
-### Navegar hacia atrás con un clickListener
-
-1. Definimos un action desde `ThirdFragment` hacia `SecondFragment`.
-
-2. Verificar que el **ID** del action sea `action_thirdFragment_to_secondFragment`.
-
-3. En nuestra clase `ThirdFragment` agregamos dentro del clickListener del botón `backButton` la función `navigate()` para llamar la acción:
-
-```kotlin
-it.findNavController().navigate(R.id.action_thirdFragment_to_secondFragment)
-```
-
-## Agregar menú de opciones
-
-En Android tenemos diferentes tipos de menus, uno de ellos es **options menu**. El usuario puede acceder al options menu dando tap en el menu que aparece en el **app bar** (representado por 3 puntos verticales).
-
-1. En el folder **res**, clic derecho y seleccionar **new > Android Resource File**.
+1. En el folder **res**, clic derecho y seleccionar **New > Android Resource File**.
 
 2. En la ventana **New Resource File**, nombramos el archivo como `options_menu`.
 
@@ -55,15 +23,18 @@ En Android tenemos diferentes tipos de menus, uno de ellos es **options menu**. 
 
 5. Desde la paleta de componentes arrastramos un **Menu Item**.
 
-6. Seleccionamos el nuevo **Menu Item** y definimos el ID como **secondFragment** y el title **Ir a segundo fragmento**.
+6. Seleccionamos el nuevo **Menu Item** y definimos el ID como **aboutFragment** y el title como **Acerca de**.
 
-7. Agregamos otro Menu Item y realizamos el mismo proceso para ir a **ThirdFragment**.
+7. Agregamos otro **Menu Item** y definimos el ID como **helpFragment** y el title como **Ayuda**.
 
-> IMPORTANTE: Si usamos el mismo ID en nuestro menu item que el ID del fragment en el navigation graph. Hará que el proceso sea más simple.
+> IMPORTANTE: Si usamos el mismo ID en nuestro Menu Item que el ID del fragmento en el Navigation Graph, el proceso será simple.
 
-8. En la clase `FirstFragment` en el metodo **onCreateView()**, antes del return, llamamos la función **setHasOptionsMenu** y le mandamos parametro **true**.
+### Configurar menú
+
+8. En la clase `WelcomeFragment` en el metodo **onCreateView()**, antes del return, llamamos la función **setHasOptionsMenu** y le mandamos parametro **true**.
 
 ```kotlin
+// Indica que este fragmento mostrará un menú del tipo "Options Menu".
 setHasOptionsMenu(true)
 ```
 
@@ -72,6 +43,8 @@ setHasOptionsMenu(true)
 ```kotlin
 override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
     super.onCreateOptionsMenu(menu, inflater)
+
+    // Inicializa el contenido del menú a través del nombre (en este caso se llama "options_menu")
     inflater.inflate(R.menu.options_menu, menu)
 }
 ```
@@ -80,8 +53,8 @@ override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
 
 ```kotlin
 override fun onOptionsItemSelected(item: MenuItem): Boolean {
-     return NavigationUI.
-            onNavDestinationSelected(item,requireView().findNavController())
-            || super.onOptionsItemSelected(item)
+    // Navegar hacia el destino asociado al Menu Item
+    return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+      || super.onOptionsItemSelected(item)
 }
 ```
