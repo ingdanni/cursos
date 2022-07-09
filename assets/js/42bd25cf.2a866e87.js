@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkuniversity_docs=self.webpackChunkuniversity_docs||[]).push([[7518],{4282:function(e){e.exports=JSON.parse('{"permalink":"/cursos/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
